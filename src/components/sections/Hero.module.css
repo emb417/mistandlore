@@ -1,0 +1,166 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-dusk);
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 40%, rgba(139, 94, 60, 0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 20% 80%, rgba(107, 124, 110, 0.12) 0%, transparent 60%),
+    linear-gradient(160deg, #2c2420 0%, #1a1410 60%, #0e0c0a 100%);
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding-block: var(--space-40);
+  padding-top: calc(var(--space-40) + 80px);
+}
+
+.eyebrow {
+  color: var(--color-ember);
+  margin-bottom: var(--space-6);
+  opacity: 0;
+  animation: fadeUp var(--duration-slow) var(--ease-gentle) 0.2s forwards;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-4xl), 8vw, var(--text-6xl));
+  font-weight: 300;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-parchment);
+  max-width: 14ch;
+  margin-bottom: var(--space-8);
+  opacity: 0;
+  animation: fadeUp var(--duration-slow) var(--ease-gentle) 0.4s forwards;
+}
+
+.headline em {
+  font-style: italic;
+  color: var(--color-ember);
+}
+
+.subhead {
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: var(--leading-loose);
+  color: rgba(245, 240, 232, 0.65);
+  max-width: 48ch;
+  margin-bottom: var(--space-12);
+  opacity: 0;
+  animation: fadeUp var(--duration-slow) var(--ease-gentle) 0.6s forwards;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp var(--duration-slow) var(--ease-gentle) 0.8s forwards;
+}
+
+.btnPrimary {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment);
+  background-color: var(--color-ember);
+  padding: var(--space-4) var(--space-10);
+  border-radius: var(--radius-full);
+  transition: background-color var(--duration-fast) var(--ease-gentle),
+              transform var(--duration-fast) var(--ease-gentle);
+}
+
+.btnPrimary:hover {
+  background-color: var(--color-ember-light);
+  transform: translateY(-1px);
+}
+
+.btnSecondary {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: rgba(245, 240, 232, 0.7);
+  border-bottom: 1px solid rgba(245, 240, 232, 0.3);
+  padding-bottom: 2px;
+  transition: color var(--duration-fast) var(--ease-gentle),
+              border-color var(--duration-fast) var(--ease-gentle);
+}
+
+.btnSecondary:hover {
+  color: var(--color-parchment);
+  border-color: rgba(245, 240, 232, 0.7);
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: var(--space-10);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: rgba(245, 240, 232, 0.35);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn var(--duration-slow) var(--ease-gentle) 1.4s forwards;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(245, 240, 232, 0.4), transparent);
+  animation: scrollPulse 2s var(--ease-gentle) infinite;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { transform: scaleY(1);   opacity: 0.4; }
+  50%       { transform: scaleY(0.6); opacity: 0.2; }
+}

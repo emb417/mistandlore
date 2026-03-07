@@ -1,0 +1,86 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding-block: var(--space-5);
+  transition: background-color var(--duration-base) var(--ease-gentle),
+              box-shadow var(--duration-base) var(--ease-gentle);
+}
+
+.nav--scrolled {
+  background-color: rgba(245, 240, 232, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-parchment);
+  line-height: 1;
+}
+
+.wordmark span {
+  color: var(--color-ember);
+}
+
+.nav--scrolled .wordmark {
+  color: var(--color-dusk);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  list-style: none;
+}
+
+.link {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-mist);
+  transition: color var(--duration-fast) var(--ease-gentle);
+}
+
+.link:hover {
+  color: var(--color-ember);
+}
+
+.nav--scrolled .link {
+  color: var(--color-bark);
+}
+
+.shopLink {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-parchment);
+  background-color: var(--color-ember);
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-full);
+  transition: background-color var(--duration-fast) var(--ease-gentle);
+}
+
+.shopLink:hover {
+  background-color: var(--color-ember-light);
+}
+
+@media (max-width: 640px) {
+  .links {
+    display: none;
+  }
+}

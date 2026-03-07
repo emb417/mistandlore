@@ -1,0 +1,151 @@
+.maker {
+  background-color: var(--color-parchment);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-24);
+  align-items: center;
+}
+
+.portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.avatarRing {
+  width: 220px;
+  height: 220px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-fog);
+  padding: var(--space-3);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-mist) 0%, var(--color-fog) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+.portraitName {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  color: var(--color-dusk);
+  text-align: center;
+}
+
+.portraitRole {
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-ash);
+  text-align: center;
+  margin-top: calc(var(--space-2) * -1);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.label {
+  margin-bottom: var(--space-2);
+}
+
+.heading {
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-4xl));
+  margin-bottom: var(--space-2);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.body p {
+  font-size: var(--text-lg);
+  font-weight: 300;
+  line-height: var(--leading-loose);
+  color: var(--color-bark);
+}
+
+.body p strong {
+  font-weight: 500;
+  color: var(--color-dusk);
+}
+
+.shops {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding-top: var(--space-4);
+}
+
+.shopBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-bark);
+  border: var(--border-thin);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-full);
+  transition: border-color var(--duration-fast) var(--ease-gentle),
+              color var(--duration-fast) var(--ease-gentle);
+}
+
+.shopBadge:hover {
+  border-color: var(--color-ember);
+  color: var(--color-ember);
+}
+
+.shopBadgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-ember);
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .portrait {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .avatarRing {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+  }
+
+  .avatar {
+    font-size: 2rem;
+  }
+
+  .portraitName,
+  .portraitRole {
+    text-align: left;
+  }
+}
