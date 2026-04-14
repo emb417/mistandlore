@@ -50,7 +50,7 @@
 }
 
 .pullquote {
-  border-left: 1px solid var(--color-driftwood);
+  border-left: var(--border-thin);
   padding-left: var(--space-8);
 }
 

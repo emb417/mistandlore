@@ -6,7 +6,7 @@
   z-index: 100;
   padding-block: var(--space-4);
   background-color: var(--color-parchment);
-  border-bottom: 1px solid var(--color-fog);
+  border-bottom: var(--border-thin);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   transition: background-color var(--duration-base) var(--ease-gentle),
@@ -148,7 +148,7 @@
     padding: var(--space-4);
     background: none;
     border-radius: 0;
-    border-bottom: 1px solid var(--color-mist);
+    border-bottom: var(--border-obsidian);
     display: block;
     text-align: center;
   }

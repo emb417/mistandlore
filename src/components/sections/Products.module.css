@@ -68,14 +68,14 @@
   text-transform: uppercase;
   letter-spacing: var(--tracking-wider);
   color: var(--color-obsidian);
-  border-bottom: 1px solid var(--color-driftwood);
+  border-bottom: var(--border-thin);
   padding-bottom: 2px;
   transition: all var(--duration-fast) var(--ease-gentle);
 }
 
 .tileLink:hover {
   color: var(--color-ash);
-  border-bottom: 1px solid var(--color-obsidian);
+  border-bottom: var(--border-obsidian);
 }
 
 .footer {
