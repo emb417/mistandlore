@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from './Nav.module.css'
 
 const ETSY_URL = 'https://mistandlore.etsy.com'
@@ -14,6 +14,8 @@ const navLinks = [
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navRef = useRef(null)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -21,17 +23,50 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isMenuOpen])
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+
+  const closeMenu = () => setIsMenuOpen(false)
+
   return (
-    <nav className={`${styles.nav}${scrolled ? ` ${styles['nav--scrolled']}` : ''}`}>
+    <nav ref={navRef} className={`${styles.nav}${scrolled ? ` ${styles['nav--scrolled']}` : ''}${isMenuOpen ? ` ${styles['nav--menu-open']}` : ''}`}>
       <div className={`${styles.inner} container`}>
-        <a href="#" className={styles.wordmark}>
+        <a href="#" className={styles.wordmark} onClick={closeMenu}>
           Mist <span>+</span> Lore
         </a>
 
-        <ul className={styles.links}>
+        <button
+          className={`${styles.hamburger} ${isMenuOpen ? styles['hamburger--open'] : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className={styles.hamburgerLine}></span>
+          <span className={styles.hamburgerLine}></span>
+          <span className={styles.hamburgerLine}></span>
+        </button>
+
+        <ul className={`${styles.links} ${isMenuOpen ? styles['links--open'] : ''}`}>
           {navLinks.map(({ label, href }) => (
             <li key={href}>
-              <a href={href} className={styles.link}>{label}</a>
+              <a href={href} className={styles.link} onClick={closeMenu}>{label}</a>
             </li>
           ))}
           <li>
@@ -40,6 +75,7 @@ export default function Nav() {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.shopLink}
+              onClick={closeMenu}
             >
               Shop Now
             </a>

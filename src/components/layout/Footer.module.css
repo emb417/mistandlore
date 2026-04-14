@@ -1,6 +1,7 @@
 .footer {
-  background-color: var(--color-dusk);
-  padding-block: var(--space-16);
+  background-color: var(--color-obsidian);
+  padding-block: var(--space-24);
+  color: var(--color-parchment);
 }
 
 .inner {
@@ -8,7 +9,7 @@
   grid-template-columns: 2fr 1fr 1fr;
   gap: var(--space-16);
   padding-bottom: var(--space-16);
-  border-bottom: 1px solid rgba(245, 240, 232, 0.08);
+  border-bottom: 1px solid var(--color-fog);
   margin-bottom: var(--space-10);
 }
 
@@ -28,14 +29,15 @@
 }
 
 .wordmark span {
-  color: var(--color-ember);
+  color: var(--color-driftwood);
+  margin-inline: 2px;
 }
 
 .tagline {
   font-size: var(--text-base);
   font-weight: 300;
   line-height: var(--leading-normal);
-  color: rgba(245, 240, 232, 0.5);
+  color: var(--color-ash);
   max-width: 32ch;
 }
 
@@ -43,18 +45,19 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: var(--text-sm);
-  font-weight: 300;
-  letter-spacing: var(--tracking-wide);
-  color: rgba(245, 240, 232, 0.35);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-driftwood);
   margin-top: var(--space-2);
 }
 
 .locationDot {
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   border-radius: var(--radius-full);
-  background-color: var(--color-ember);
+  background-color: var(--color-driftwood);
   flex-shrink: 0;
 }
 
@@ -69,14 +72,14 @@
   font-weight: 500;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: rgba(245, 240, 232, 0.35);
+  color: var(--color-ash);
   margin-bottom: var(--space-2);
 }
 
 .colLink {
   font-size: var(--text-sm);
-  font-weight: 300;
-  color: rgba(245, 240, 232, 0.6);
+  font-weight: 400;
+  color: var(--color-driftwood);
   transition: color var(--duration-fast) var(--ease-gentle);
   width: fit-content;
 }
@@ -94,21 +97,43 @@
 }
 
 .copyright {
-  font-size: var(--text-sm);
-  font-weight: 300;
-  color: rgba(245, 240, 232, 0.25);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-ash);
 }
 
 .heart {
-  color: var(--color-ember);
+  color: var(--color-driftwood);
 }
 
 .madeIn {
   font-size: var(--text-sm);
   font-weight: 300;
-  color: rgba(245, 240, 232, 0.25);
+  color: var(--color-ash);
   font-style: italic;
   font-family: var(--font-display);
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-10);
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .brand {
+    grid-column: auto;
+  }
 }
 
 @media (max-width: 768px) {

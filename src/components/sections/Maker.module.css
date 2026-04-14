@@ -20,7 +20,7 @@
   width: 220px;
   height: 220px;
   border-radius: var(--radius-full);
-  border: 1.5px solid var(--color-fog);
+  border: 1px solid var(--color-driftwood);
   padding: var(--space-3);
 }
 
@@ -28,7 +28,7 @@
   width: 100%;
   height: 100%;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--color-mist) 0%, var(--color-fog) 100%);
+  background-color: var(--color-mist);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,16 +39,16 @@
   font-family: var(--font-display);
   font-size: var(--text-2xl);
   font-weight: 400;
-  color: var(--color-dusk);
+  color: var(--color-obsidian);
   text-align: center;
 }
 
 .portraitRole {
-  font-size: var(--text-sm);
-  font-weight: 400;
-  letter-spacing: var(--tracking-wide);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--color-ash);
+  color: var(--color-driftwood);
   text-align: center;
   margin-top: calc(var(--space-2) * -1);
 }
@@ -78,12 +78,12 @@
   font-size: var(--text-lg);
   font-weight: 300;
   line-height: var(--leading-loose);
-  color: var(--color-bark);
+  color: var(--color-ash);
 }
 
 .body p strong {
   font-weight: 500;
-  color: var(--color-dusk);
+  color: var(--color-obsidian);
 }
 
 .shops {
@@ -97,28 +97,27 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: var(--text-sm);
-  font-weight: 400;
-  letter-spacing: var(--tracking-wide);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--color-bark);
-  border: var(--border-thin);
-  padding: var(--space-2) var(--space-5);
-  border-radius: var(--radius-full);
-  transition: border-color var(--duration-fast) var(--ease-gentle),
-              color var(--duration-fast) var(--ease-gentle);
+  color: var(--color-obsidian);
+  border: 1px solid var(--color-obsidian);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast) var(--ease-gentle);
 }
 
 .shopBadge:hover {
-  border-color: var(--color-ember);
-  color: var(--color-ember);
+  background-color: var(--color-obsidian);
+  color: var(--color-parchment);
 }
 
 .shopBadgeDot {
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
   border-radius: var(--radius-full);
-  background-color: var(--color-ember);
+  background-color: var(--color-driftwood);
   flex-shrink: 0;
 }
 

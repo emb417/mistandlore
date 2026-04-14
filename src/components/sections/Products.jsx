@@ -2,30 +2,30 @@ import styles from './Products.module.css'
 
 const ETSY_URL = 'https://mistandlore.etsy.com'
 
-const products = [
+const categories = [
   {
-    icon: '🌿',
-    name: 'Egyptian Kyphi & Incense',
-    desc: 'Ancient resin incense and hand-dipped sticks rooted in ritual. Slow-burning, deeply aromatic, made to mark moments.',
-    tag: 'Ritual',
+    image: '/vintage_green_chrome_spray.jpg',
+    name: 'Sprays',
+    desc: 'Artisanal body and linen mists for home and spirit.',
+    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57292809",
   },
   {
-    icon: '✨',
-    name: 'Room, Body & Linen Sprays',
-    desc: 'Crafted in reusable recycled-glass bottles with thoughtfully chosen spray tops. Customizable scent, vessel, and finish.',
-    tag: 'Customizable',
+    image: '/scrub_eucalyptus.jpg',
+    name: 'Salts and Scrubs',
+    desc: 'Mineral-rich exfoliants infused with pure essential oils.',
+    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57708486",
   },
   {
-    icon: '🌙',
-    name: 'Weighted Eye Pillows',
-    desc: 'Aromatherapy eye pillows designed for deep rest — ideal for yoga, meditation, migraine relief, and quiet moments.',
-    tag: 'Wellness',
+    image: '/boho_eye_pillows.jpg',
+    name: 'Hot/Cold Therapy',
+    desc: 'Weighted eye pillows and wraps for deep relaxation.',
+    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57551100",
   },
   {
-    icon: '🔥',
-    name: 'Wraps & Foot Warmers',
-    desc: 'Warm and cold wraps and cozy foot warmers infused with calming scents. Comfort you can feel from head to toe.',
-    tag: 'Comfort',
+    image: '/kyphi_new_2.jpg',
+    name: 'Incense',
+    desc: 'Ancient Egyptian Kyphi and hand-dipped botanical sticks.',
+    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57225275",
   },
 ]
 
@@ -35,31 +35,30 @@ export default function Products() {
       <div className="container">
 
         <div className={styles.header}>
-          <p className={`eyebrow ${styles.label}`}>What We Make</p>
+          <p className="eyebrow">Our Products</p>
           <h2 className={`display ${styles.heading}`}>
-            Goods Made to Invite Rest, Ritual &amp; Beauty
+            Handcrafted for Rest &amp; Ritual
           </h2>
-          <p className={styles.subhead}>
-            Every item is handmade in small batches in Portland, Oregon.
-            Some are ready to ship — others are made-to-order with care and intention.
-          </p>
         </div>
 
         <div className={styles.grid}>
-          {products.map(({ icon, name, desc, tag }) => (
-            <div key={name} className={styles.card}>
-              <span className={styles.cardIcon} aria-hidden="true">{icon}</span>
-              <h3 className={styles.cardName}>{name}</h3>
-              <p className={styles.cardDesc}>{desc}</p>
-              <span className={styles.cardTag}>{tag}</span>
+          {categories.map(({ image, name, desc, url }) => (
+            <div key={name} className={styles.tile}>
+              <div className={styles.imageWrapper}>
+                <img src={image} alt={name} className={styles.image} />
+              </div>
+              <div className={styles.tileContent}>
+                <h3 className={styles.tileName}>{name}</h3>
+                <p className={styles.tileDesc}>{desc}</p>
+                <a href={url} className={styles.tileLink}>Shop Category</a>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className={styles.cta}>
-          <p className={styles.ctaText}>
-            <strong>All items are available on Etsy.</strong>{' '}
-            Many can be customized — scent, vessel, and finish.
+        <div className={styles.footer}>
+          <p className={styles.footerText}>
+            Every item is handmade in small batches in Portland, Oregon.
           </p>
           <a
             href={ETSY_URL}
@@ -67,7 +66,7 @@ export default function Products() {
             rel="noopener noreferrer"
             className={styles.ctaBtn}
           >
-            Browse the Full Collection
+            Explore the Etsy Shop
           </a>
         </div>
 

@@ -1,5 +1,5 @@
 .philosophy {
-  background-color: var(--color-dusk);
+  background-color: var(--color-mist);
   position: relative;
   overflow: hidden;
 }
@@ -8,8 +8,7 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 50% at 80% 50%, rgba(139, 94, 60, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 70% at 10% 80%, rgba(107, 124, 110, 0.08) 0%, transparent 60%);
+    radial-gradient(circle at 80% 20%, rgba(163, 144, 125, 0.08) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -28,7 +27,7 @@
 
 .heading {
   font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
-  color: var(--color-parchment);
+  color: var(--color-obsidian);
   margin-bottom: var(--space-8);
 }
 
@@ -42,11 +41,11 @@
   font-size: var(--text-lg);
   font-weight: 300;
   line-height: var(--leading-loose);
-  color: rgba(245, 240, 232, 0.7);
+  color: var(--color-ash);
 }
 
 .body p strong {
-  color: var(--color-parchment);
+  color: var(--color-obsidian);
   font-weight: 400;
 }
 
@@ -62,7 +61,7 @@
   font-weight: 500;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--color-ash);
+  color: var(--color-driftwood);
   margin-bottom: var(--space-2);
 }
 
@@ -74,21 +73,20 @@
 
 .mood {
   font-family: var(--font-display);
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   font-weight: 300;
   font-style: italic;
-  color: var(--color-parchment);
-  background-color: rgba(245, 240, 232, 0.06);
-  border: 1px solid rgba(245, 240, 232, 0.12);
-  padding: var(--space-2) var(--space-5);
-  border-radius: var(--radius-full);
-  transition: background-color var(--duration-fast) var(--ease-gentle),
-              border-color var(--duration-fast) var(--ease-gentle);
+  color: var(--color-obsidian);
+  background-color: var(--color-parchment);
+  border: 1px solid var(--color-fog);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-fast) var(--ease-gentle);
 }
 
 .mood:hover {
-  background-color: rgba(139, 94, 60, 0.2);
-  border-color: rgba(139, 94, 60, 0.4);
+  border-color: var(--color-driftwood);
+  color: var(--color-driftwood);
 }
 
 .audience {
@@ -102,7 +100,7 @@
   font-weight: 500;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--color-ash);
+  color: var(--color-driftwood);
   margin-bottom: var(--space-2);
 }
 
@@ -112,15 +110,26 @@
   gap: var(--space-4);
   font-size: var(--text-base);
   font-weight: 300;
-  color: rgba(245, 240, 232, 0.7);
+  color: var(--color-ash);
 }
 
 .audienceDot {
   width: 4px;
   height: 4px;
   border-radius: var(--radius-full);
-  background-color: var(--color-ember);
+  background-color: var(--color-driftwood);
   flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+
+  .right {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 768px) {

@@ -5,84 +5,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap');
 
 :root {
-  /* --- Color Palette --- */
-  --color-parchment:     #f5f0e8;   /* warm off-white background */
-  --color-mist:          #e8e4dc;   /* subtle section contrast */
-  --color-fog:           #d4cfc6;   /* borders, dividers */
-  --color-ash:           #9c9890;   /* muted text, captions */
-  --color-bark:          #4a4440;   /* body text */
-  --color-dusk:          #2c2420;   /* headings, deep contrast */
-  --color-ember:         #8b5e3c;   /* warm accent, CTAs */
-  --color-ember-light:   #a8754f;   /* hover state */
-  --color-sage:          #6b7c6e;   /* secondary accent */
-  --color-sage-light:    #8a9e8d;   /* hover state */
+  /* --- Color Palette: Obsidian & Parchment --- */
+  --color-parchment:     #F9F7F2;   /* warm off-white background */
+  --color-obsidian:      #1A1A1A;   /* soft black for typography & buttons */
+  --color-driftwood:     #A3907D;   /* weathered driftwood highlight */
+  
+  --color-mist:          #F2EFE9;   /* subtle section contrast */
+  --color-fog:           #E5E1D8;   /* borders, dividers */
+  --color-ash:           #706D66;   /* muted text */
 
   /* --- Typography --- */
   --font-display:        'Cormorant Garamond', Georgia, serif;
   --font-body:           'Jost', system-ui, sans-serif;
 
-  --text-xs:    0.75rem;    /*  12px */
-  --text-sm:    0.875rem;   /*  14px */
-  --text-base:  1rem;       /*  16px */
-  --text-lg:    1.125rem;   /*  18px */
-  --text-xl:    1.25rem;    /*  20px */
-  --text-2xl:   1.5rem;     /*  24px */
-  --text-3xl:   2rem;       /*  32px */
-  --text-4xl:   2.75rem;    /*  44px */
-  --text-5xl:   3.75rem;    /*  60px */
-  --text-6xl:   5rem;       /*  80px */
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-lg:    1.125rem;
+  --text-xl:    1.25rem;
+  --text-2xl:   1.5rem;
+  --text-3xl:   2.25rem;
+  --text-4xl:   3.25rem;
+  --text-5xl:   4.5rem;
+  --text-6xl:   6rem;
 
   --leading-tight:  1.1;
   --leading-snug:   1.3;
   --leading-normal: 1.6;
-  --leading-loose:  1.9;
+  --leading-loose:  2.0;
 
   --tracking-tight:  -0.02em;
   --tracking-normal: 0em;
-  --tracking-wide:   0.08em;
-  --tracking-wider:  0.15em;
+  --tracking-wide:   0.05em;
+  --tracking-wider:  0.12em;
 
   /* --- Spacing --- */
   --space-1:   0.25rem;
   --space-2:   0.5rem;
   --space-3:   0.75rem;
   --space-4:   1rem;
-  --space-5:   1.25rem;
   --space-6:   1.5rem;
   --space-8:   2rem;
-  --space-10:  2.5rem;
   --space-12:  3rem;
   --space-16:  4rem;
-  --space-20:  5rem;
   --space-24:  6rem;
   --space-32:  8rem;
-  --space-40:  10rem;
 
   /* --- Layout --- */
   --max-width-text:    680px;
-  --max-width-content: 1080px;
-  --max-width-wide:    1320px;
+  --max-width-content: 1140px;
+  --max-width-wide:    1440px;
 
   /* --- Borders & Radius --- */
   --radius-sm:   4px;
   --radius-md:   8px;
-  --radius-lg:   16px;
+  --radius-lg:   12px;
   --radius-full: 9999px;
 
   --border-thin:   1px solid var(--color-fog);
-  --border-medium: 1.5px solid var(--color-fog);
+  --border-obsidian: 1px solid var(--color-obsidian);
 
   /* --- Shadows --- */
-  --shadow-sm:  0 1px 4px rgba(44, 36, 32, 0.06);
-  --shadow-md:  0 4px 16px rgba(44, 36, 32, 0.1);
-  --shadow-lg:  0 12px 40px rgba(44, 36, 32, 0.14);
+  --shadow-sm:  0 2px 8px rgba(26, 26, 26, 0.04);
+  --shadow-md:  0 8px 24px rgba(26, 26, 26, 0.08);
 
   /* --- Transitions --- */
-  --ease-gentle:  cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-spring:  cubic-bezier(0.34, 1.56, 0.64, 1);
-  --duration-fast:   150ms;
-  --duration-base:   300ms;
-  --duration-slow:   600ms;
+  --ease-gentle:  cubic-bezier(0.25, 0.1, 0.25, 1);
+  --duration-fast:   200ms;
+  --duration-base:   400ms;
 }
 
 /* ============================================
@@ -98,12 +88,11 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background-color: var(--color-parchment);
-  color: var(--color-bark);
+  color: var(--color-obsidian);
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: var(--leading-normal);
@@ -118,6 +107,11 @@ img, video {
 a {
   color: inherit;
   text-decoration: none;
+  transition: opacity var(--duration-fast) var(--ease-gentle);
+}
+
+a:hover {
+  opacity: 0.8;
 }
 
 button {
@@ -133,10 +127,9 @@ button {
 
 .display {
   font-family: var(--font-display);
-  font-weight: 300;
+  font-weight: 400;
   line-height: var(--leading-tight);
-  letter-spacing: var(--tracking-tight);
-  color: var(--color-dusk);
+  color: var(--color-obsidian);
 }
 
 .eyebrow {
@@ -145,7 +138,7 @@ button {
   font-weight: 500;
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--color-ember);
+  color: var(--color-driftwood);
 }
 
 .prose {
@@ -153,7 +146,7 @@ button {
   font-size: var(--text-lg);
   font-weight: 300;
   line-height: var(--leading-loose);
-  color: var(--color-bark);
+  color: var(--color-obsidian);
   max-width: var(--max-width-text);
 }
 
@@ -168,16 +161,8 @@ button {
   padding-inline: var(--space-8);
 }
 
-.container--wide {
-  max-width: var(--max-width-wide);
-}
-
-.container--text {
-  max-width: var(--max-width-text);
-}
-
 .section {
-  padding-block: var(--space-32);
+  padding-block: var(--space-24);
 }
 
 .section--mist {
