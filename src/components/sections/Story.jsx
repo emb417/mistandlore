@@ -29,7 +29,7 @@ export default function Story() {
           <div className={styles.body}>
             <p>
               Mist + Lore was created as a natural evolution of our original
-              shop, <strong>CheekyLinens</strong>, which began with handmade
+              shop, <a href="https://cheekylinens.etsy.com" target="_blank" rel="noopener noreferrer"><strong>CheekyLinens</strong></a>, which began with handmade
               napkins and home textiles. As our offerings expanded into
               aromatherapy and ritual goods, we realized these pieces deserved
               a space of their own — one rooted in atmosphere, intention, and
