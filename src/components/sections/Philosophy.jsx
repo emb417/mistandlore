@@ -33,7 +33,7 @@ export default function Philosophy() {
               it feel alive.
             </p>
             <p>
-              With Mist + Lore, you are invited to choose your environment —
+              With mist + lore, you are invited to choose your environment —
               whether that's peaceful, cozy, loving, restorative, or simply
               beautiful.
             </p>

@@ -86,6 +86,17 @@
   color: var(--color-obsidian);
 }
 
+.link {
+  color: var(--color-obsidian);
+  border-bottom: var(--border-thin);
+  transition: all var(--duration-fast) var(--ease-gentle);
+}
+
+.link:hover {
+  color: var(--color-ash);
+  border-bottom: var(--border-obsidian);
+}
+
 .shops {
   display: flex;
   gap: var(--space-4);

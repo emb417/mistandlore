@@ -49,7 +49,7 @@ export default function Nav() {
     <nav ref={navRef} className={`${styles.nav}${scrolled ? ` ${styles['nav--scrolled']}` : ''}${isMenuOpen ? ` ${styles['nav--menu-open']}` : ''}`}>
       <div className={`${styles.inner} container`}>
         <a href="#" className={styles.wordmark} onClick={closeMenu}>
-          Mist <span>+</span> Lore
+          mist <span>+</span> lore
         </a>
 
         <button

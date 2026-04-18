@@ -47,6 +47,7 @@
 .tileContent {
   padding: var(--space-8);
   background-color: var(--color-parchment);
+  height: 100%;
 }
 
 .tileName {
@@ -112,7 +113,7 @@
   .grid {
     grid-template-columns: 1fr;
   }
-  
+
   .tileContent {
     padding: var(--space-6);
   }

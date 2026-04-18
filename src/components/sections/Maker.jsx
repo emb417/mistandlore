@@ -24,8 +24,9 @@ export default function Maker() {
 
           <div className={styles.body}>
             <p>
-              I'm <strong>Nikki</strong>, the maker behind Mist + Lore and 
-              <a href={CHEEKY_URL} target="_blank" rel="noopener noreferrer">CheekyLinens</a>. I find joy in creating goods that bring warmth,
+              I'm <strong>Nikki</strong>, the maker behind <a href={ETSY_URL} target="_blank" rel="noopener noreferrer" className={styles.link}>mist + lore</a> and{" "} 
+              <a href={CHEEKY_URL} target="_blank" rel="noopener noreferrer" className={styles.link}>CheekyLinens</a>. 
+              I find joy in creating goods that bring warmth,
               comfort, and beauty into people's homes — objects that feel both
               functional and a little bit magical.
             </p>

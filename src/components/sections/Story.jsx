@@ -11,7 +11,7 @@ const timeline = [
   },
   {
     year: 'Now',
-    text: 'Mist + Lore carries her work forward — honoring her legacy while making it our own.',
+    text: 'mist + lore carries her work forward — honoring her legacy while making it our own.',
   },
 ]
 
@@ -28,7 +28,7 @@ export default function Story() {
 
           <div className={styles.body}>
             <p>
-              Mist + Lore was created as a natural evolution of our original
+              mist + lore was created as a natural evolution of our original
               shop, <a href="https://cheekylinens.etsy.com" target="_blank" rel="noopener noreferrer"><strong>CheekyLinens</strong></a>, which began with handmade
               napkins and home textiles. As our offerings expanded into
               aromatherapy and ritual goods, we realized these pieces deserved
@@ -39,14 +39,12 @@ export default function Story() {
             <div className={styles.divider} />
 
             <p>
-              The heart of Mist + Lore comes from legacy. My mother-in-law was
+              The heart of mist + lore comes from legacy. My mother-in-law was
               a <strong>certified aromatherapist</strong> whose knowledge,
               recipes, and deep respect for scent as ritual shaped everything
-              she created. For years, I worked alongside her in her shop,
-              Pink Moon Hallow, and at her booth at the{' '}
-              <strong>Minnesota Renaissance Fair</strong> — learning not just
-              formulas, but the quiet art of creating mood, memory, and comfort
-              through aroma.
+              she created. Learning from her at Pink Moon Hallow and the 
+              <strong>Minnesota Renaissance Fair</strong> — not just formulas, 
+              but the quiet art of creating mood, memory, and comfort through aroma. 
             </p>
 
             <p>
@@ -55,26 +53,6 @@ export default function Story() {
             </p>
           </div>
         </div>
-
-        <div className={styles.aside}>
-          <div className={styles.pullquote}>
-            <blockquote>
-              "Scent is a quiet form of storytelling."
-            </blockquote>
-            <cite>Nikki, maker &amp; founder</cite>
-          </div>
-
-          <div className={styles.origins}>
-            <p className={styles.originsLabel}>How we got here</p>
-            {timeline.map(({ year, text }) => (
-              <div key={year} className={styles.originsItem}>
-                <span className={styles.originsYear}>{year}</span>
-                <p className={styles.originsText}>{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
       </div>
     </section>
   )
