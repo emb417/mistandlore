@@ -1,5 +1,5 @@
 .philosophy {
-  background-color: var(--color-mist);
+  background-color: var(--color-fog);
   position: relative;
   overflow: hidden;
 }
@@ -7,8 +7,11 @@
 .backdrop {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(163, 144, 125, 0.08) 0%, transparent 50%);
+  background: radial-gradient(
+    circle at 80% 20%,
+    rgba(163, 144, 125, 0.08) 0%,
+    transparent 50%
+  );
   pointer-events: none;
 }
 

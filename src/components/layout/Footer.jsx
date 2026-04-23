@@ -1,47 +1,52 @@
-import styles from './Footer.module.css'
-
-const ETSY_URL = 'https://mistandlore.etsy.com'
-const CHEEKY_URL = 'https://cheekylinens.etsy.com'
+import styles from "./Footer.module.css";
 
 const shopLinks = [
-  { label: 'All Products',    href: ETSY_URL },
-  { label: 'Room Sprays',     href: ETSY_URL },
-  { label: 'Incense & Resin', href: ETSY_URL },
-  { label: 'Eye Pillows',     href: ETSY_URL },
-  { label: 'Wraps & Warmers', href: ETSY_URL },
-]
+  {
+    label: "Sprays",
+    href: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57292809",
+  },
+  {
+    label: "Salts and Scrubs",
+    href: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57708486",
+  },
+  {
+    label: "Hot and Cold Therapy",
+    href: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57551100",
+  },
+  {
+    label: "Incense",
+    href: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57225275",
+  },
+];
 
 const siteLinks = [
-  { label: 'Our Story',  href: '#story'      },
-  { label: 'Products',   href: '#products'   },
-  { label: 'Philosophy', href: '#philosophy' },
-  { label: 'The Maker',  href: '#maker'      },
-  { label: 'CheekyLinens', href: CHEEKY_URL, external: true },
-]
+  { label: "Our Story", href: "#story" },
+  { label: "Philosophy", href: "#philosophy" },
+  {
+    label: "CheekyLinens",
+    href: "https://cheekylinens.etsy.com",
+    external: true,
+  },
+];
 
 export default function Footer() {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
 
   return (
     <footer className={styles.footer}>
       <div className="container">
-
         <div className={styles.inner}>
           <div className={styles.brand}>
             <a href="#" className={styles.wordmark}>
-              Mist <span>+</span> Lore
+              mist <span>+</span> lore
             </a>
-            <p className={styles.tagline}>
-              Handmade aromatherapy &amp; wellness goods rooted in legacy,
-              intention, and sensory experience.
-            </p>
             <span className={styles.location}>
               <span className={styles.locationDot} aria-hidden="true" />
-              Handmade in Portland, Oregon
+              Made in Portland, Oregon
             </span>
           </div>
 
-          <div className={styles.col}>
+          {/* <div className={styles.col}>
             <p className={styles.colLabel}>Shop</p>
             {shopLinks.map(({ label, href }) => (
               <a
@@ -63,25 +68,21 @@ export default function Footer() {
                 key={label}
                 href={href}
                 className={styles.colLink}
-                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                {...(external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
               >
                 {label}
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div className={styles.bottom}>
-          <p className={styles.copyright}>
-            &copy; {year} Mist + Lore. Made with{' '}
-            <span className={styles.heart}>♥</span> by Nikki.
-          </p>
-          <p className={styles.madeIn}>
-            Small batches, big intention.
-          </p>
+          <p className={styles.copyright}>&copy; {year} mist + lore.</p>
+          <p className={styles.madeIn}>Handcrafted aromatherapy essentials.</p>
         </div>
-
       </div>
     </footer>
-  )
+  );
 }

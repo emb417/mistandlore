@@ -1,59 +1,64 @@
-'use client'
+"use client";
 
-import { useState, useEffect, useRef } from 'react'
-import styles from './Nav.module.css'
+import { useState, useEffect, useRef } from "react";
+import styles from "./Nav.module.css";
 
-const ETSY_URL = 'https://mistandlore.etsy.com'
+const ETSY_URL = "https://mistandlore.etsy.com";
 
 const navLinks = [
-  { label: 'Our Story',  href: '#story'      },
-  { label: 'Products',   href: '#products'   },
-  { label: 'Philosophy', href: '#philosophy' },
-  { label: 'The Maker',  href: '#maker'      },
-]
+  { label: "Our Story", href: "#story" },
+  // { label: "Products", href: "#products" },
+  { label: "Philosophy", href: "#philosophy" },
+  // { label: 'The Maker',  href: '#maker'      },
+];
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const navRef = useRef(null)
+  const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navRef = useRef(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
-        setIsMenuOpen(false)
+        setIsMenuOpen(false);
       }
-    }
+    };
 
     if (isMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside)
+      document.addEventListener("mousedown", handleClickOutside);
     } else {
-      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [isMenuOpen])
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const closeMenu = () => setIsMenuOpen(false)
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav ref={navRef} className={`${styles.nav}${scrolled ? ` ${styles['nav--scrolled']}` : ''}${isMenuOpen ? ` ${styles['nav--menu-open']}` : ''}`}>
+    <nav
+      ref={navRef}
+      className={`${styles.nav}${scrolled ? ` ${styles["nav--scrolled"]}` : ""}${isMenuOpen ? ` ${styles["nav--menu-open"]}` : ""}`}
+    >
       <div className={`${styles.inner} container`}>
-        <a href="#" className={styles.wordmark} onClick={closeMenu}>
-          mist <span>+</span> lore
-        </a>
+        <h1 className={styles.brand}>
+          <a href="#" className={styles.wordmark} onClick={closeMenu}>
+            mist <span>+</span> lore
+          </a>
+        </h1>
 
         <button
-          className={`${styles.hamburger} ${isMenuOpen ? styles['hamburger--open'] : ''}`}
+          className={`${styles.hamburger} ${isMenuOpen ? styles["hamburger--open"] : ""}`}
           onClick={toggleMenu}
           aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
@@ -63,10 +68,14 @@ export default function Nav() {
           <span className={styles.hamburgerLine}></span>
         </button>
 
-        <ul className={`${styles.links} ${isMenuOpen ? styles['links--open'] : ''}`}>
+        <ul
+          className={`${styles.links} ${isMenuOpen ? styles["links--open"] : ""}`}
+        >
           {navLinks.map(({ label, href }) => (
             <li key={href}>
-              <a href={href} className={styles.link} onClick={closeMenu}>{label}</a>
+              <a href={href} className={styles.link} onClick={closeMenu}>
+                {label}
+              </a>
             </li>
           ))}
           <li>
@@ -83,5 +92,5 @@ export default function Nav() {
         </ul>
       </div>
     </nav>
-  )
+  );
 }

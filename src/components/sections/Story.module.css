@@ -40,7 +40,7 @@
 .divider {
   width: 48px;
   height: 1px;
-  background-color: var(--color-fog);
+  background-color: var(--color-obsidian);
   margin-block: var(--space-4);
 }
 
