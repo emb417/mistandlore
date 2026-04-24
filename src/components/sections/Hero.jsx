@@ -7,25 +7,25 @@ const TILES = [
   {
     src: "/spray_clear_black_cap.jpg",
     name: "Sprays",
-    desc: "Custom fine mist sprays for room, linens, and body to elevate the essence of your home and spirit.",
+    desc: "Room, linen, and body sprays to elevate the essence of your home and spirit. Customize your scent, bottle, and spray top.",
     url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57292809",
   },
   {
     src: "/scrub_eucalyptus.jpg",
     name: "Salts and Scrubs",
-    desc: "Mineral soaks and scrubs formulated to revitalize the body. A blend of magnesium-rich salts, pure essential oils, and botanicals designed to support physical recovery and intentional rest.",
+    desc: "Mineral soaks and scrubs formulated to revitalize the body. Blends of magnesium-rich salts, pure essential oils, and botanicals.",
     url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57708486",
   },
   {
     src: "/boho_eye_pillows.jpg",
     name: "Hot and Cold Therapy",
-    desc: "Weighted wraps and pillows to provide targeted relief. A blend of temperature-responsive grains, pure essential oils, and botanicals designed to support physical comfort and intentional stillness.",
+    desc: "Weighted wraps and pillows to provide targeted relief. Temperature-responsive grains infused with pure essential oils and botanicals.",
     url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57551100",
   },
   {
     src: "/kyphi_new_3.jpg",
     name: "Incense",
-    desc: "Resins and sticks formulated to shift the atmosphere. A blend of traditional aromatics, rare resins, and harvested botanicals designed to support sensory presence and intentional ritual.",
+    desc: "Resins and sticks crafted to shift the atmosphere. Combinations of traditional aromatics, rare resins, and botanicals.",
     url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57225275",
   },
 ];
@@ -39,8 +39,7 @@ export default function Hero() {
         <p className={`eyebrow ${styles.label}`}>aromatherapy essentials</p>
         Handcrafted for mind, body, and home.
         <br />
-        We use premium materials designed for restorative focus and sensory
-        presence.
+        We use premium ingredients for restorative focus and mindful presence.
       </div>
       <div className={styles.grid}>
         {TILES.map((tile, i) => (

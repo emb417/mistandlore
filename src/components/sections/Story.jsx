@@ -27,6 +27,22 @@ export default function Story() {
 
           <div className={styles.body}>
             <p>
+              The heart of mist + lore comes from legacy. My mother-in-law was
+              an artist at heart and a certified aromatherapist. Her knowledge,
+              recipes, and deep respect for scent as ritual shaped everything
+              she created. I learned from her at Pink Moon Hallow and the
+              Minnesota Renaissance Fair. She passed down formulas and the quiet
+              art of creating atmosphere through aroma.
+            </p>
+
+            <p>
+              When she passed in 2019, we felt called to carry her work forward,
+              honoring her spirit while infusing it with our own. What started
+              as a batch of Egyptian Kyphi to remember her by, became an outlet
+              to continue her traditions and share with others.
+            </p>
+            <div className={styles.divider} />
+            <p>
               mist + lore was created as a natural evolution of our original
               shop,{" "}
               <a
@@ -38,25 +54,12 @@ export default function Story() {
               </a>
               , which began with handmade napkins and home textiles. As our
               offerings expanded into aromatherapy and ritual goods, we realized
-              these pieces deserved a space of their own — one rooted in
-              atmosphere, intention, and sensory experience.
-            </p>
-
-            <div className={styles.divider} />
-
-            <p>
-              The heart of mist + lore comes from legacy. My mother-in-law was a{" "}
-              <strong>certified aromatherapist</strong> whose knowledge,
-              recipes, and deep respect for scent as ritual shaped everything
-              she created. Learning from her at Pink Moon Hallow and the{" "}
-              <strong>Minnesota Renaissance Fair</strong> — not just formulas,
-              but the quiet art of creating mood, memory, and comfort through
-              aroma.
+              these pieces deserved a space of their own.
             </p>
 
             <p>
-              When she passed in 2019, we felt called to carry her work forward
-              — honoring her spirit while infusing it with our own.
+              All items are handcrafted in small batches, or made to order in
+              Portland, Oregon.
             </p>
           </div>
         </div>

@@ -1,17 +1,20 @@
-import styles from './Philosophy.module.css'
+import styles from "./Philosophy.module.css";
 
 const moods = [
-  'Peaceful', 'Cozy', 'Loving', 'Restorative', 'Grounded', 'Uplifted', 'Beautiful',
-]
+  "Calm & Relaxed",
+  "Energized & Alert",
+  "Focused & Clear",
+  "Grounded & Stable",
+  "Uplifted & Joyful",
+];
 
 const audience = [
-  'Yoga and meditation lovers',
-  'Migraine and stress sufferers',
-  'Busy moms seeking moments of calm',
-  'Spiritual and ritual-minded souls',
-  'Cozy-home enthusiasts',
-  'Thoughtful gift-givers',
-]
+  "Yoga and meditation lovers",
+  "Busy moms seeking moments of calm",
+  "Spiritual and ritual-minded souls",
+  "Cozy-home enthusiasts",
+  "Thoughtful gift-givers",
+];
 
 export default function Philosophy() {
   return (
@@ -19,30 +22,18 @@ export default function Philosophy() {
       <div className={styles.backdrop} aria-hidden="true" />
 
       <div className={`${styles.inner} container`}>
-
         <div>
           <p className={`eyebrow ${styles.label}`}>Our Philosophy</p>
           <h2 className={`display ${styles.heading}`}>
-            Choose Your Environment
+            Choose Your Atmosphere
           </h2>
 
           <div className={styles.body}>
             <p>
-              We believe <strong>scent is a quiet form of storytelling.</strong>{' '}
-              It can calm or energize, ground or uplift, soften a space or make
-              it feel alive.
-            </p>
-            <p>
-              With mist + lore, you are invited to choose your environment —
-              whether that's peaceful, cozy, loving, restorative, or simply
-              beautiful.
-            </p>
-            <p>
-              All items are <strong>handmade in small batches</strong> in
-              Portland, Oregon. Our sprays are crafted in reusable recycled-glass
-              bottles, and many items are customizable — allowing you to select
-              the scent, vessel, and finish that best reflects the atmosphere
-              you want to create.
+              We believe <strong>scent is a quiet form of storytelling.</strong>{" "}
+              Whether you're looking for a sense of calm, uplifting engergy, or
+              anything in-between, mist + lore is a place for you to create the
+              perfect atmosphere.
             </p>
           </div>
         </div>
@@ -52,7 +43,9 @@ export default function Philosophy() {
             <p className={styles.moodsLabel}>Create the feeling of</p>
             <div className={styles.moods}>
               {moods.map((mood) => (
-                <span key={mood} className={styles.mood}>{mood}</span>
+                <span key={mood} className={styles.mood}>
+                  {mood}
+                </span>
               ))}
             </div>
           </div>
@@ -67,8 +60,7 @@ export default function Philosophy() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
-  )
+  );
 }
