@@ -12,6 +12,14 @@ export const metadata = {
     siteName: "mist + lore",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/banner.png",
+        width: 1200,
+        height: 630,
+        alt: "mist + lore aromatherapy essentials",
+      },
+    ],
   },
 };
 
