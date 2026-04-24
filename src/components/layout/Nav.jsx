@@ -7,9 +7,7 @@ const ETSY_URL = "https://mistandlore.etsy.com";
 
 const navLinks = [
   { label: "Our Story", href: "#story" },
-  // { label: "Products", href: "#products" },
   { label: "Philosophy", href: "#philosophy" },
-  // { label: 'The Maker',  href: '#maker'      },
 ];
 
 export default function Nav() {
@@ -53,6 +51,13 @@ export default function Nav() {
       <div className={`${styles.inner} container`}>
         <h1 className={styles.brand}>
           <a href="#" className={styles.wordmark} onClick={closeMenu}>
+            <img
+              src="/logo.png"
+              alt="mist + lore logo"
+              width="42"
+              height="42"
+              className={styles.logo}
+            />
             mist <span>+</span> lore
           </a>
         </h1>
