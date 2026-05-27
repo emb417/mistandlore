@@ -1,7 +1,7 @@
 import styles from './Maker.module.css'
 
-const ETSY_URL = 'https://mistandlore.etsy.com'
-const CHEEKY_URL = 'https://cheekylinens.etsy.com'
+const ETSY_URL = 'https://mistandlore.etsy.com?utm_source=mistandlore_website&utm_medium=referral&utm_campaign=main_site'
+const CHEEKY_URL = 'https://cheekylinens.etsy.com?utm_source=mistandlore_website&utm_medium=referral&utm_campaign=main_site'
 
 export default function Maker() {
   return (

@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "./Nav.module.css";
 
-const ETSY_URL = "https://mistandlore.etsy.com";
+const ETSY_URL = "https://mistandlore.etsy.com?utm_source=mistandlore_website&utm_medium=referral&utm_campaign=main_site";
 
 const navLinks = [
   { label: "Our Story", href: "#story" },

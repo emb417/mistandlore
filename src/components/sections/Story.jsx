@@ -46,8 +46,7 @@ export default function Story() {
               mist + lore was created as a natural evolution of our original
               shop,{" "}
               <a
-                href="https://cheekylinens.etsy.com"
-                target="_blank"
+                href="https://cheekylinens.etsy.com?utm_source=mistandlore_website&utm_medium=referral&utm_campaign=main_site"                target="_blank"
                 rel="noopener noreferrer"
               >
                 <strong>CheekyLinens</strong>

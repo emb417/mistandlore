@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google-analytics";
 
 export const metadata = {
   title: "mist + lore — Aromatherapy Essentials",
@@ -27,7 +28,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+      </body>
     </html>
   );
 }

@@ -8,25 +8,25 @@ const TILES = [
     src: "/spray_clear_black_cap.jpg",
     name: "Sprays",
     desc: "Room, linen, and body sprays to elevate the essence of your home and spirit. Customize your scent, bottle, and spray top.",
-    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57292809",
+    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57292809&utm_source=mistandlore_website&utm_medium=referral&utm_campaign=main_site",
   },
   {
     src: "/scrub_eucalyptus.jpg",
     name: "Salts and Scrubs",
     desc: "Mineral soaks and scrubs formulated to revitalize the body. Blends of magnesium-rich salts, pure essential oils, and botanicals.",
-    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57708486",
+    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57708486&utm_source=mistandlore_website&utm_medium=referral&utm_campaign=main_site",
   },
   {
     src: "/boho_eye_pillows.jpg",
     name: "Hot and Cold Therapy",
     desc: "Weighted wraps and pillows to provide targeted relief. Temperature-responsive grains infused with pure essential oils and botanicals.",
-    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57551100",
+    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57551100&utm_source=mistandlore_website&utm_medium=referral&utm_campaign=main_site",
   },
   {
     src: "/kyphi_new_3.jpg",
     name: "Incense",
     desc: "Resins and sticks crafted to shift the atmosphere. Combinations of traditional aromatics, rare resins, and botanicals.",
-    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57225275",
+    url: "https://www.etsy.com/shop/mistandlore/?etsrc=sdt&section_id=57225275&utm_source=mistandlore_website&utm_medium=referral&utm_campaign=main_site",
   },
 ];
 
