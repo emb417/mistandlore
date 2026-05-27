@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google-analytics";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   title: "mist + lore — Aromatherapy Essentials",
